@@ -15,7 +15,7 @@ h1, h2 {
 }
 
 p, ul li {
-  color: #d1d1d1;
+  color: #ffffff;
 }
 
 /* Navigation Image */
@@ -69,7 +69,7 @@ p, ul li {
 }
 
 .mobile-navbar-links a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 14px 20px;
   border-top: 1px solid #444;
