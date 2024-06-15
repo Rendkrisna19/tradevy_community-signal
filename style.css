@@ -1,21 +1,99 @@
+/* Base Styles */
 body {
-  background-color: #121212;
+  background-color: #212a32;
   color: white;
   margin: 0;
   padding: 0;
-
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.nav-img {
-  width: 200px;
-  height: 200px;
-  position: right;
-  margin-top: 20px;
+h1, h2 {
+  margin-bottom: 10px;
 }
 
+p, ul li {
+  color: #d1d1d1;
+}
+
+/* Navigation Image */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #050505;
+  padding: 10px 20px;
+  background-image: url("/img/call-to-action-bg.jpg");
+  
+
+}
+
+.navbar-logo img {
+  
+  width: 60px;
+}
+
+.navbar-links a {
+  color: rgb(0, 238, 255);
+  text-decoration: none;
+  padding: 14px 20px;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.mobile-navbar-links {
+  display: none;
+  flex-direction: column;
+  background-color: #070707;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+}
+
+.mobile-navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-top: 1px solid #444;
+}
+
+.section {
+  padding: 60px 20px;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none;
+  }
+
+  .navbar-toggle {
+      display: flex;
+  }
+
+  .mobile-navbar-links.active {
+      display: flex;
+  }
+}
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -23,10 +101,16 @@ body {
   padding: 50px;
   flex-wrap: wrap;
   background-image: url("/img/call-to-action-bg.jpg");
+  background-size: cover; /* Ensure the background image covers the full area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .hero-content {
   max-width: 600px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .hero-content h1 {
@@ -62,15 +146,6 @@ body {
   margin-top: 20px;
 }
 
-.stats {
-  margin-top: 30px;
-}
-
-.number {
-  font-size: 32px;
-  font-weight: bold;
-}
-
 .hero-image img {
   max-width: 100%;
   height: auto;
@@ -97,26 +172,12 @@ body {
   .cta {
     font-size: 16px;
   }
-
-  .number {
-    font-size: 24px;
-  }
 }
 
+/* Stats Section */
 .container {
   text-align: center;
   padding: 50px 20px;
-}
-
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1em;
-  margin: 10px 0;
-  color: #d1d1d1;
 }
 
 .stats {
@@ -134,23 +195,18 @@ p {
   min-width: 150px;
   flex: 1;
   text-align: center;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .stat-item h2 {
   font-size: 2em;
-  margin-bottom: 5px;
 }
 
 .stat-item p {
   font-size: 1em;
-  color: #d1d1d1;
 }
 
 @media (max-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
-
   .stat-item {
     padding: 15px;
     margin: 5px;
@@ -165,14 +221,15 @@ p {
   }
 }
 
+/* Section 2 */
 .container-secion2 {
   text-align: left;
   max-width: 900px;
   padding: 20px;
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .content {
@@ -180,6 +237,10 @@ p {
   padding: 20px;
   border-radius: 10px;
   width: 100%;
+  background-size: cover; /* Ensure the background image covers the full area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 ul {
@@ -217,11 +278,10 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  h1 {
-    font-size: 2em;
+  .container-secion2 {
+    flex-direction: column;
   }
 
-  p,
   ul li {
     font-size: 1em;
   }
@@ -232,12 +292,17 @@ button:hover {
   }
 }
 
+/* Image Container */
 .image-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .image-container img {
@@ -246,46 +311,20 @@ button:hover {
   border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-  .main-container {
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  p,
-  ul li {
-    font-size: 1em;
-  }
-
-  button {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-}
-
-.img-laptop {
-  width: 500px;
-  height: 500px;
-}
-
-.image-container {
-  background-image: url("/img/call-to-action-bg.jpg");
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-}
-
+/* Pricing Container */
 .container-harga {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #000000;
+  background-color: #000;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url("/img/call-to-action-bg.jpg");
+  background-size: cover; /* Ensure the background image covers the full area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .header {
@@ -295,6 +334,7 @@ button:hover {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   color: #00e1ff;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .header img {
@@ -309,6 +349,7 @@ button:hover {
 
 .promo {
   padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .promo h2 {
@@ -327,6 +368,7 @@ button:hover {
 .promo li {
   padding: 10px;
   border-bottom: 1px solid #ddd;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .promo li:last-child {
@@ -341,6 +383,7 @@ button:hover {
 .footer {
   padding: 10px;
   text-align: center;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .footer a {
@@ -352,98 +395,47 @@ button:hover {
   color: #23527c;
 }
 
-/* Responsive design */
 @media only screen and (max-width: 600px) {
-  .container {
+  .container-harga {
     margin: 20px auto;
     padding: 10px;
   }
+
   .header {
     flex-direction: column;
     align-items: center;
   }
+
   .header img {
     width: 30px;
     height: 30px;
   }
+
   .header span {
     font-size: 16px;
   }
+
   .promo {
     padding: 10px;
   }
+
   .promo h2 {
     font-size: 20px;
   }
+
   .promo li {
     padding: 5px;
   }
+
   .footer {
     padding: 5px;
   }
 }
 
+/* FAQ Section */
 .container-FAQ {
   width: 50%;
   margin: 50px auto;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-.question {
-  background-color: #333;
-  padding: 15px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.answer {
-  display: none;
-  background-color: #222;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-.question:hover {
-  background-color: #444;
-}
-
-.arrow {
-  float: right;
-  font-size: 1.5em;
-  margin-top: 5px;
-}
-
-.arrow.down {
-  transform: rotate(90deg);
-}
-
-.container-footer {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.item a {
-  flex-basis: calc(20% - 20px);
-  margin: 10px;
-  text-align: center;
-}
-
-.item img {
-  width: 100%;
-  height: auto;
-}
-
-@media screen and (max-width: 768px) {
-  .item {
-    flex-basis: calc(50% - 20px);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .item {
-    flex-basis: 100%;
-  }
-}

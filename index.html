@@ -16,17 +16,45 @@
 </head>
 <body>
     <!--nav-->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="./img/Logo Tradevy.png" alt="Logo">
+        </div>
+        <div class="navbar-links">
+            <a href="#hero">Home</a>
+            <a href="#gabung">About</a>
+            <a href="#vip">Gabung sekarang</a>
+            <a href="#FAQ">FAQ</a>
+            <a href="#tentangsaya">Tentang saya</a>
+        </div>
+        <div class="navbar-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="mobile-navbar-links" id="mobile-navbar-links">
+        <a href="#hero">Home</a>
+        <a href="#gabung">About</a>
+        <a href="#vip">Gabung sekarang</a>
+        <a href="#FAQ">FAQ</a>
+        <a href="#tentangsaya">Tentang saya</a>
+    </div>
+
+
+    
+        
+    
    
         
         
-            <img src="./img/Logo Tradevy.png" alt="" class="nav-img animate__animated animate__backInLeft">
-            
+           
    
         
-        <section class="hero">
+        <section class="hero" id="hero">
             
             <div class="hero-content">
-                <h1 class="animate__animated animate__backInLeft" id="main-heading">Dapatkan Penghasilan dari Trading</h1>
+                <h1 class="animate__animated animate__backInLeft" id="main-heading">Dapatkan Penghasilan Dari Trading</h1>
                 <p  style="color: aqua;" id="moving-text">Signal Forex</p>
                 <p class="animate__animated animate__backInDown" id="description">Ribuan orang sudah cuan dari komunitas, signal, dan indikator dari Tradevy_community.</p>
                 <a href="#gabung" class="cta" id="cta-button">Gabung sekarang</a>
@@ -155,27 +183,34 @@
     </div>
 
     <!--FAQ-->
-    <div class="container-FAQ">
-        <div class="question">
+    <div class="container-FAQ" >
+        <h1 style="color: aqua;">FAQ</h1>
+        <div class="question" id="FAQ">
           ▸ Apa itu Tradevy_community?
           <span class="arrow down"></span>
         </div>
         <div class="answer">
           Tradevy_community adalah <strong>Signal Forex</strong> yang dibuat oleh Mas dev. Anda akan mendapatkan akses ke grup diskusi, signal trading, dan juga indikator eksklusif.
         </div>
-        <script>
-          const question = document.querySelector('.question');
-          const answer = document.querySelector('.answer');
-          const arrow = document.querySelector('.arrow');
-      
-          question.addEventListener('click', () => {
-            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
-            arrow.classList.toggle('down');
-          });
-        </script>
+       
       </div>
    
     <!--footer/tentang saya-->
+    <div class="tentangsaya" id="tetangsaya">
+        <footer class="footer">
+            <div class="footer-logo">
+                <img src="./img/Logo Tradevy.png" alt="Logo">
+            </div>
+            <div class="footer-links">
+                <a href="https://t.me/+FRW2IqaO_oExNjFl" target="_blank">Telegram</a>
+                <a href="https://wa.me/6285695669427" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/devfx19/" target="_blank">Instagram</a>
+            </div>
+        </footer>
+
+    </div>
+
+
     
    
 
